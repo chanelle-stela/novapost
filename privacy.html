@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Politique de Confidentialité — NovaPost</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080b12;
+      --surface: #0e1420;
+      --border: #1c2438;
+      --accent: #00e5ff;
+      --text: #e8edf5;
+      --muted: #6b7a99;
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.8;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8,11,18,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    nav ul { display: flex; gap: 2rem; list-style: none; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: var(--text); }
+
+    .page-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 8rem 2rem 5rem;
+    }
+
+    .page-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .last-updated {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin: 2.5rem 0 0.8rem;
+    }
+
+    p { color: #b0bdd4; font-size: 0.95rem; margin-bottom: 1rem; }
+
+    ul {
+      color: #b0bdd4;
+      font-size: 0.95rem;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    ul li { margin-bottom: 0.4rem; }
+
+    .highlight-box {
+      background: rgba(0,229,255,0.05);
+      border: 1px solid rgba(0,229,255,0.15);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      color: #9ec9d4;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    footer p { color: var(--muted); font-size: 0.82rem; margin: 0; }
+    footer a { color: var(--accent); text-decoration: none; font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Nova<span>Post</span></a>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="terms.html">CGU</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+    <span class="page-tag">Légal</span>
+    <h1>Politique de<br/>Confidentialité</h1>
+    <p class="last-updated">Dernière mise à jour : 21 avril 2026 — NovaTeam</p>
+
+    <div class="highlight-box">
+      Cette politique décrit comment NovaPost collecte, utilise et protège vos informations personnelles lors de l'utilisation de notre application d'automatisation de contenu TikTok.
+    </div>
+
+    <h2>1. Qui sommes-nous ?</h2>
+    <p>NovaPost est une application développée par NovaTeam permettant aux créateurs de contenu d'automatiser la génération et la publication de vidéos sur TikTok. Notre application utilise l'API officielle TikTok Content Posting API pour interagir avec la plateforme TikTok.</p>
+
+    <h2>2. Données que nous collectons</h2>
+    <p>Dans le cadre de l'utilisation de NovaPost, nous pouvons collecter les informations suivantes :</p>
+    <ul>
+      <li><strong>Informations de compte TikTok</strong> : nom d'utilisateur, identifiant unique (open_id), avatar et informations de profil publiques, fournies lors de la connexion via TikTok Login Kit.</li>
+      <li><strong>Tokens d'accès</strong> : access token et refresh token nécessaires au fonctionnement de l'intégration TikTok. Ces tokens sont stockés localement sur votre appareil et ne sont jamais transmis à nos serveurs.</li>
+      <li><strong>Contenu généré</strong> : les scripts, vidéos et légendes créés par l'application sont générés localement et ne sont pas stockés de façon permanente sur nos serveurs.</li>
+      <li><strong>Données techniques</strong> : informations sur votre appareil, version de l'application, logs d'erreurs à des fins de débogage.</li>
+    </ul>
+
+    <h2>3. Comment nous utilisons vos données</h2>
+    <p>Nous utilisons vos informations exclusivement pour :</p>
+    <ul>
+      <li>Authentifier votre compte TikTok via OAuth 2.0 officiel</li>
+      <li>Publier du contenu sur votre profil TikTok avec votre consentement explicite</li>
+      <li>Améliorer les performances et la fiabilité de l'application</li>
+      <li>Résoudre les problèmes techniques signalés</li>
+    </ul>
+    <p>Nous n'utilisons jamais vos données à des fins publicitaires, et nous ne les vendons en aucun cas à des tiers.</p>
+
+    <h2>4. Partage de données avec TikTok</h2>
+    <p>NovaPost utilise l'API officielle de TikTok. Lors de la publication de contenu, les métadonnées de la vidéo (titre, hashtags, paramètres de confidentialité) sont transmises directement à TikTok conformément à leurs conditions d'utilisation. Nous vous encourageons à consulter la <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" style="color:var(--accent)">politique de confidentialité de TikTok</a>.</p>
+
+    <h2>5. Consentement avant publication</h2>
+    <p>Conformément aux directives TikTok, NovaPost demande votre consentement explicite avant chaque publication. Vous pouvez à tout moment :</p>
+    <ul>
+      <li>Consulter le contenu avant qu'il soit publié</li>
+      <li>Modifier les paramètres de confidentialité (public, amis, privé)</li>
+      <li>Activer ou désactiver les commentaires, duets et stitches</li>
+      <li>Annuler la publication</li>
+    </ul>
+
+    <h2>6. Sécurité des données</h2>
+    <p>Nous appliquons des mesures de sécurité standard pour protéger vos données :</p>
+    <ul>
+      <li>Tous les tokens d'accès sont stockés de façon chiffrée sur votre appareil local</li>
+      <li>Les communications avec l'API TikTok utilisent exclusivement HTTPS</li>
+      <li>Les tokens expirés sont automatiquement renouvelés ou supprimés</li>
+    </ul>
+
+    <h2>7. Conservation des données</h2>
+    <p>Nous ne conservons pas vos données au-delà de la durée nécessaire au bon fonctionnement de l'application. Les tokens d'accès TikTok sont supprimés dès lors que vous déconnectez votre compte de NovaPost.</p>
+
+    <h2>8. Vos droits</h2>
+    <p>Vous disposez des droits suivants concernant vos données personnelles :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> : obtenir une copie de vos données</li>
+      <li><strong>Droit de rectification</strong> : corriger des informations inexactes</li>
+      <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+      <li><strong>Droit de révocation</strong> : révoquer à tout moment l'accès de NovaPost à votre compte TikTok via les paramètres TikTok</li>
+    </ul>
+
+    <h2>9. Mineurs</h2>
+    <p>NovaPost n'est pas destiné aux personnes de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles concernant des mineurs.</p>
+
+    <h2>10. Modifications de cette politique</h2>
+    <p>Nous pouvons mettre à jour cette politique de temps en temps. La date de la dernière mise à jour est indiquée en haut de cette page. L'utilisation continue de l'application après modification vaut acceptation des nouvelles conditions.</p>
+
+    <h2>11. Nous contacter</h2>
+    <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter à : <a href="mailto:contact@novapost.app" style="color:var(--accent)">contact@novapost.app</a></p>
+
+    <footer>
+      <p>© 2026 NovaPost by NovaTeam</p>
+      <a href="terms.html">Conditions d'utilisation →</a>
+    </footer>
+  </div>
+
+</body>
+</html>
